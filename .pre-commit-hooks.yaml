@@ -3,5 +3,5 @@
     description: Check the copyright year
     entry: copyright-year -i
     language: python
-    files: \.(c|cc|cxx|cpp|frag|glsl|h|hpp|hxx|ih|ispc|ipp|java|js|m|mm|proto|textproto|vert)$
+    files: \.(py|c|cc|cxx|cpp|frag|glsl|h|hpp|hxx|ih|ispc|ipp|java|js|m|mm|proto|textproto|vert)$
     args: []
