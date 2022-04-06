@@ -19,7 +19,7 @@ def main():
                         if str(year) in line:
                             break
                         else:
-                            print(filename, 'has incorrect copyright year of "' , line.strip(), '"')
+                            print(filename, 'has incorrect copyright year of "' , line.strip(), '" it should contain', year)
                             return 1
 
         except:
