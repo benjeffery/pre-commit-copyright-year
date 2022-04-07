@@ -10,7 +10,8 @@ def main():
             if "Changes to be committed" in result.stdout:
                 year = datetime.datetime.now().year
             elif "nothing to commit" in result.stdout:
-                year = subprocess.run(['git', 'log', '-1', '--format="%as"', '--', filename], capture_output=True, text=True).stdout[1:5]
+                log = subprocess.run(['git', 'log', '--format="%as s"', '--', filename], capture_output=True, text=True).stdout.split("/n")
+                year = [line for line in log if "Fix copyright" not in line][0][1:5]
             else:
                 continue
             with open(filename, "r") as f:
